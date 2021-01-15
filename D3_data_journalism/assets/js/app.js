@@ -136,3 +136,18 @@ if (value !== chosenXAxis) {
 
     // updates x scale for new data
     xLinearScale = xScale(stateData, chosenXAxis);
+
+    
+    // updates x axis with transition
+    xAxis = renderXAxes(xLinearScale, xAxis);
+
+    // updates circles with new x values
+    circlesXY = renderXCircles(circlesXY, xLinearScale, chosenXAxis);
+
+    // updates circles text with new x values
+    circlesText = renderXText(circlesText, xLinearScale, chosenXAxis);
+
+    // updates tooltips with new info
+    circlesGroup = updateToolTip(circlesGroup, chosenXAxis, chosenYAxis);
+
+    
