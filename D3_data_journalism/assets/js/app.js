@@ -95,4 +95,27 @@ let circlesText = circlesGroup.append("text")
 .attr("dy", d => yLinearScale(d[chosenYAxis]) + 5)
 .classed("stateText", true);
 
+// Create group for 3 x-axis labels
+const xlabelsGroup = chartGroup.append("g")
+.attr("transform", 'translate(${width / 2}, ${height})');
 
+const povertyLabel = xlabelsGroup.append("text")
+.attr("x", 0)
+.attr("y", 40)
+.attr("value", "poverty") // value to grab for event listener
+.text("In Poverty (%)")
+.classed("active", true);
+
+const ageLabel = xlabelsGroup.append("text")
+.attr("x", 0)
+.attr("y", 60)
+.attr("value", "age") // value to grab for event listener
+.text("Age (Median)")
+.classed("inactive", true);
+
+const incomeLabel = xlabelsGroup.append("text")
+.attr("x", 0)
+.attr("y", 80)
+.attr("value", "income") // value to grab for event listener
+.text("Household Income (Median)")
+.classed("inactive", true);
