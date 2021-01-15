@@ -119,3 +119,20 @@ const incomeLabel = xlabelsGroup.append("text")
 .attr("value", "income") // value to grab for event listener
 .text("Household Income (Median)")
 .classed("inactive", true);
+
+
+// initial tooltips
+circlesGroup = updateToolTip(circlesGroup, chosenXAxis, chosenYAxis);
+
+// x axis labels event listener
+xlabelsGroup.selectAll("text")
+.on("click", function() {
+// get value of selection
+const value = d3.select(this).attr("value");
+if (value !== chosenXAxis) {
+
+    // replaces chosenXAxis with value
+    chosenXAxis = value;
+
+    // updates x scale for new data
+    xLinearScale = xScale(stateData, chosenXAxis);
