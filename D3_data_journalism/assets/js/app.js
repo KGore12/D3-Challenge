@@ -77,4 +77,22 @@ let circlesText = circlesGroup.append("text")
 .attr("dy", d => yLinearScale(d[chosenYAxis]) + 5)
 .classed("stateText", true); 
 
+// Create scatterplot and append initial circles
+let circlesGroup = chartGroup.selectAll("g circle")
+.data(stateData)
+.enter()
+.append("g");
+
+let circlesXY = circlesGroup.append("circle")
+.attr("cx", d => xLinearScale(d[chosenXAxis]))
+.attr("cy", d => yLinearScale(d[chosenYAxis]))
+.attr("r", 15)
+.classed("stateCircle", true);
+
+let circlesText = circlesGroup.append("text")
+.text(d => d.abbr)
+.attr("dx", d => xLinearScale(d[chosenXAxis]))
+.attr("dy", d => yLinearScale(d[chosenYAxis]) + 5)
+.classed("stateText", true);
+
 
