@@ -42,3 +42,39 @@ data.smokes     = +data.smokes;
 data.obesity    = +data.obesity;
 data.income     = +data.income;
 });
+
+// Initialize scale functions
+let xLinearScale = xScale(stateData, chosenXAxis);
+let yLinearScale = yScale(stateData, chosenYAxis);
+
+// Initialize axis functions
+let bottomAxis = d3.axisBottom(xLinearScale);
+let leftAxis = d3.axisLeft(yLinearScale);
+
+// Append x and y axes to the chart
+let xAxis = chartGroup.append("g")
+  .attr("transform", 'translate(0, ${height})')
+  .call(bottomAxis);
+
+let yAxis = chartGroup.append("g")
+  .call(leftAxis);
+
+// Create scatterplot and append initial circles
+let circlesGroup = chartGroup.selectAll("g circle")
+.data(stateData)
+.enter()
+.append("g");
+
+let circlesXY = circlesGroup.append("circle")
+.attr("cx", d => xLinearScale(d[chosenXAxis]))
+.attr("cy", d => yLinearScale(d[chosenYAxis]))
+.attr("r", 15)
+.classed("stateCircle", true);
+
+let circlesText = circlesGroup.append("text")
+.text(d => d.abbr)
+.attr("dx", d => xLinearScale(d[chosenXAxis]))
+.attr("dy", d => yLinearScale(d[chosenYAxis]) + 5)
+.classed("stateText", true); 
+
+
