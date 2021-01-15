@@ -29,3 +29,16 @@ let chosenXAxis = "poverty";
 let chosenYAxis = "healthcare";
 
 (async function(){
+
+// Import Data
+const stateData = await d3.csv("assets/data/data.csv");
+
+// Parse Data/Cast as numbers
+stateData.forEach(function(data) {
+data.poverty    = +data.poverty;
+data.healthcare = +data.healthcare;
+data.age        = +data.age;
+data.smokes     = +data.smokes;
+data.obesity    = +data.obesity;
+data.income     = +data.income;
+});
