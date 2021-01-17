@@ -2,6 +2,10 @@
 
 ![Newsroom](https://media.giphy.com/media/v2xIous7mnEYg/giphy.gif)
 
+The D3 enabled interactive scatterplot above allows you to click through to see if rates of poverty correlate to the percentage that lack healthcare with respect to U.S. states.
+Click here to view in the browser: 
+
+
 ## Background
 
 Welcome to the newsroom! You've just accepted a data visualization position for a major metro paper. You're tasked with analyzing the current trends shaping people's lives, as well as creating charts, graphs, and interactive elements to help readers understand your findings.
