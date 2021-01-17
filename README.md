@@ -16,3 +16,6 @@ The data set included with the assignment is based on 2014 ACS 1-year estimates 
     * state abbreviations are in the circles
     * Created and situated the axes and labels to the left and bottom of the chart
 * Coded the graphic in app.js. 
+
+![](https://github.com/KGore12/d3-challenge/blob/main/Missions_to_Mars/images/JPL_Mars_Space_Images_-_Featured_Image.png)
+
