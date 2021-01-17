@@ -13,5 +13,6 @@ The data set included with the assignment is based on 2014 ACS 1-year estimates 
 ## Assignment
 * Created a scatter plot between the two data variables of Healthcare vs. Poverty.
 * Used the D3 techniques, taught to us in class, and created a scatter plot that represents each state with circle elements.
-    * state abbreviations were in the circles
+    * state abbreviations are in the circles
+    * Created and situated the axes and labels to the left and bottom of the chart
 * Coded the graphic in app.js. 
