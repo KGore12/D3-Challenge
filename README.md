@@ -10,6 +10,8 @@ The editor wants to run a series of feature stories about the health risks facin
 
 The data set included with the assignment is based on 2014 ACS 1-year estimates from the [US Census Bureau](https://data.census.gov/cedsci/), but you are free to investigate a different data set. The current data set includes data on rates of income, obesity, poverty, etc. by state. MOE stands for "margin of error."
 
+![](https://github.com/KGore12/D3-challenge/blob/main/images/scatter.png)
+
 ## Assignment
 * Created a scatter plot between the two data variables of Healthcare vs. Poverty.
 * Used the D3 techniques, taught to us in class, and created a scatter plot that represents each state with circle elements.
@@ -17,5 +19,12 @@ The data set included with the assignment is based on 2014 ACS 1-year estimates 
     * Created and situated the axes and labels to the left and bottom of the chart
 * Coded the graphic in app.js. 
 
-![](https://github.com/KGore12/d3-challenge/blob/main/images/scatter.png)
+![](https://github.com/KGore12/D3-challenge/blob/main/images/jscode.png)
 
+![](https://github.com/KGore12/D3-challenge/blob/main/images/d3tooltip.png)
+
+## Insights
+
+There looks to be a positive correlation between the those that lack healthcare and poverty levels. Southern states tend to have the highest rates of poverty and less healthcare coverage (with Texas being an outlier as it has the highest % lacking healthcare) while some New England states have the lowest rates of poverty and lack of healthcare. I would also say the New Mexico is another outlier as it is simliar to some of the Southern states.
+
+![](https://github.com/KGore12/D3-challenge/blob/main/images/tx_outlier.png)
